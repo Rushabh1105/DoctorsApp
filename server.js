@@ -1,21 +1,12 @@
 const express = require("express");
 
-
+const apiRouter = require("./src/routes/apiRouter");
 
 
 const app = express();
 
 
-
-
-
-app.get("/", async(req, res) => {
-    res.json({
-        status : 200,
-        success : true,
-        message : "hitting the api"
-    })
-})
+app.use("/api", apiRouter);
 
 
 
