@@ -21,7 +21,7 @@ const createCategory = async (req, res) => {
 
 const updateCategory = async (req, res) => {
     try {
-        const response = await CategoryServiece.updateCategory(req.params._id, req.body);
+        const response = await CategoryServiece.updateCategory(req.params.name, req.body);
         return res.json({
             status : 200,
             success : true,
